@@ -1,13 +1,12 @@
 # Dial Button Macro
 
-Welcome to our WXSD DEMO Repo! <!-- Keep this here --> 
-
 This Webex Device macro creates a single speed dial button on your devices touch interface.
 
 ![image](https://user-images.githubusercontent.com/21026209/213460048-d8881f80-61fd-41be-88aa-95139b728929.png)
 
+## Overview
 
-It is easy to configure and delpoy without the need to upload a seperate UI Extension file to the device.
+This Webex Device macro programmatically adds a UI Extension button to your Webex Device and then listens for when it has been clicked. Once clicked, the macro will then dial the target number specified in the macros config. Below is an extract of the macros config, which lets you easily customise this macro on your device and for your use case.
 
 ```javascript
 const config = {
@@ -24,21 +23,21 @@ With additional configuration, the Webex Devices other calling icons can also be
 ![image](https://user-images.githubusercontent.com/21026209/213461826-f41dcbf8-0242-4e85-82d9-d41f4ecb5027.png)
 
 
-<!-- Keep the following here -->  
- *_Everything included is for demo and Proof of Concept purposes only. Your use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for. These demos are for Cisco Webex usecases, but are not Official Cisco Webex Branded demos._
-
-
-## Requirements
-
-1. RoomOS/CE 9.6.x or above Webex Device.
-2. Web admin access to the device to uplaod the macro.
-
-
 ## Setup
 
+### Prerequisites & Dependencies: 
+
+- RoomOS/CE 9.6.x or above Webex Device.
+- Web admin access to the device to upload the macro.
+
+
+### Installation Steps:
 1. Download the ``dial-button.js`` file and upload it to your Webex Room devices Macro editor via the web interface.
 2. Configure the Macro by changing the initial values, there are comments explaining each one.
 3. Enable the Macro on the editor.
+4. (Optional) - Hide all other native UI buttons and calling options, refer to these two device configurations:
+  - https://roomos.cisco.com/xapi/Configuration.UserInterface.Features.HideAll
+  - https://roomos.cisco.com/xapi/Configuration.RoomScheduler.Enabled
 
 ## Validation
 
@@ -51,6 +50,21 @@ Validated Hardware:
 
 This macro should work on other Webex Devices but has not been validated at this time.
 
-## Support
 
-Please reach out to the WXSD team at [wxsd@external.cisco.com](mailto:wxsd@external.cisco.com?subject=dial-button-macro)
+## Demo
+
+*For more demos & PoCs like this, check out our [Webex Labs site](https://collabtoolbox.cisco.com/webex-labs).
+
+
+## License
+
+All contents are licensed under the MIT license. Please see [license](LICENSE) for details.
+
+
+## Disclaimer
+
+Everything included is for demo and Proof of Concept purposes only. Use of the site is solely at your own risk. This site may contain links to third party content, which we do not warrant, endorse, or assume liability for. These demos are for Cisco Webex use cases, but are not Official Cisco Webex Branded demos.
+
+
+## Questions
+Please contact the WXSD team at [wxsd@external.cisco.com](mailto:wxsd@external.cisco.com?subject=dial-button-macro) for questions. Or, if you're a Cisco internal employee, reach out to us on the Webex App via our bot (globalexpert@webex.bot). In the "Engagement Type" field, choose the "API/SDK Proof of Concept Integration Development" option to make sure you reach our team. 
