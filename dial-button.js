@@ -50,7 +50,6 @@ async function createPanel() {
   const panel = `
     <Extensions>
       <Panel>
-        <Type>Statusbar</Type>
         <Location>HomeScreen</Location>
         <Icon>${config.buttonIcon}</Icon>
         <Color>${config.buttonColor}</Color>
